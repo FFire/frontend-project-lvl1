@@ -1,10 +1,9 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "prettier": "prettier-airbnb-config",
   "type": "module",
   "description": "this is training project ",
-  "main": "./bin/brain-games.js",
+  "main": "bin/brain-games.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./bin/brain-games.js"
@@ -22,14 +21,18 @@
     "url": "https://github.com/FFire/frontend-project-lvl1/issues"
   },
   "homepage": "https://github.com/FFire/frontend-project-lvl1#readme",
-  "devDependencies": {
-    "eslint": "^7.2.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.22.1",
-    "prettier-airbnb-config": "^1.0.0"
-  },
   "dependencies": {
+    "-": "^0.0.1",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
   }
 }
