@@ -1,8 +1,8 @@
-// import readlineSync from 'readline-sync';
+import readlineSync from 'readline-sync';
 
-// const txtWelcome = () => 'Welcome to the Brain Games!';
-// const txtWhatIsYourName = () => 'May I have your name?';
-// const txtHello = (userName) => `Hello, ${userName}!`;
+const txtWelcome = () => 'Welcome to the Brain Games!';
+const txtWhatIsYourName = () => 'May I have your name? ';
+const txtHello = (userName) => `Hello, ${userName}!`;
 // const txtCongratuation = (userName) => `Congratulations, ${userName}!`;
 // const txtQuestion = (question) => `Question: ${question}`;
 // const txtAnswer = (yourAnswer) => `Your answer: ${yourAnswer}`;
@@ -13,11 +13,19 @@
 //   return `${line1}\n\r${line2}`;
 // };
 
+const getUserName = () => {
+  console.log(txtWelcome());
+  return readlineSync.question(txtWhatIsYourName());
+};
+
 const action = (questions, answers) => {
   // for (let i = 0; i < questions.length; i += 1) {
   //   const question = questions[i];
   //   const answer = answers[i];
   // }
+  const userName = getUserName();
+  console.log(txtHello(userName));
+
   console.log(`q:${questions} --- a: ${answers}`);
 };
 export default action;
