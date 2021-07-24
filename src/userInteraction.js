@@ -8,10 +8,10 @@ const txtQuestion = (question) => `Question: ${question} `;
 const txtAnswer = (yourAnswer) => `Your answer: ${yourAnswer}`;
 const txtCorrect = () => 'Correct!';
 const txtNonCorrect = (userName, userAnswer, answer) => {
-  const line1 = `${userAnswer} is wrong answer ;(. Correct answer was ${answer}.`;
-  const line2 = `Let's try again, ${userName}!`;
-  return `${line1}\n\r${line2}`;
+  const line = `${userAnswer} is wrong answer ;(. Correct answer was ${answer}.`;
+  return line;
 };
+const txtGoodBye = (userName) => `Let's try again, ${userName}!`;
 
 const getUserName = () => {
   console.log(txtWelcome());
@@ -31,7 +31,8 @@ const action = (txtDescription, questions, answers) => {
       console.log(txtAnswer(userAnswer));
       console.log(txtCorrect());
     } else {
-      console.log(txtNonCorrect(userName, userAnswer, answer));
+      console.log(txtNonCorrect(userAnswer, answer));
+      console.log(txtGoodBye(userName));
       return;
     }
   }
