@@ -1,19 +1,20 @@
-import action from '../userInteraction.js';
 import getRandomInt from './getRandomInt.js';
 
-const startGame = () => {
-  const questionsInTest = 3;
-  const txtDescription = () => 'Answer "yes" if the number is even, otherwise answer "no".';
-  const questions = [];
-  const answers = [];
+// game data generator of qestions and right answers
+// gameData = [['question 1', 'yes'],['question 2', 'no'],['question 3', 'yes']]
+const generateGameData = (questionsInTest) => {
+  const gameData = [];
+
   for (let i = 0; i < questionsInTest; i += 1) {
+    const item = [];
     const qestion = getRandomInt(1, 11);
     const answer = qestion % 2 === 0 ? 'yes' : 'no';
-    questions.push(qestion);
-    answers.push(answer);
+    item.push(qestion);
+    item.push(answer);
+    gameData.push(item);
   }
 
-  action(txtDescription, questions, answers);
+  return gameData;
 };
 
-export default startGame;
+export default generateGameData;
