@@ -6,3 +6,5 @@
 
 brain-even  install module, win and loose
 [![asciicast](https://asciinema.org/a/kuNSVZcMWU8vruybxbfsFBNDT.svg)](https://asciinema.org/a/kuNSVZcMWU8vruybxbfsFBNDT)
+
+<script id="asciicast-kuNSVZcMWU8vruybxbfsFBNDT" src="https://asciinema.org/a/kuNSVZcMWU8vruybxbfsFBNDT.js" async></script>
