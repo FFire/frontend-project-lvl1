@@ -1,5 +1,5 @@
-import generateGameData from '../src/games/brain-progression';
-import consoleInteract from '../src/userInteraction.js';
+import generateGameData from '../src/games/brain-progression.js';
+import consoleInteract from '../src/index.js';
 
 const questionsInTest = 3;
 const txtDescription = () => 'What number is missing in the progression?';
