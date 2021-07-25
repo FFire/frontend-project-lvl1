@@ -15,3 +15,6 @@ brain-gcd install module, win and loose
 
 brain-progression install module, win and loose
 [![asciicast](https://asciinema.org/a/n2VD4oMwc3N8ynUM4odkV6de7.svg)](https://asciinema.org/a/n2VD4oMwc3N8ynUM4odkV6de7)
+
+brain-prime install module, win and loose
+[![asciicast](https://asciinema.org/a/JDUU16NK1UDuW0gnPJptLmkoj.svg)](https://asciinema.org/a/JDUU16NK1UDuW0gnPJptLmkoj)
