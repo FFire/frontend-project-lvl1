@@ -1,13 +1,17 @@
 import getRandomInt from './getRandomInt.js';
 
+// calculate GCD for pair of numbers
 const gcd = (a, b) => (!b ? a : gcd(b, a % b));
 
+// Generate array of all pairs that give GCD as resault of gcdBase
+// generateGcdArray(3) : [[6, 9], [6, 12], [9, 12] ... and so on]
 const generateGcdArray = (gcdBase) => {
-  const upLimit = 50;
+  const lowLimit = gcdBase + 1;
+  const hiLimit = 50;
   const acc = [];
 
-  for (let arg1 = gcdBase + 1; arg1 < upLimit; arg1 += 1) {
-    for (let arg2 = gcdBase + 1; arg2 < upLimit; arg2 += 1) {
+  for (let arg1 = lowLimit; arg1 < hiLimit; arg1 += 1) {
+    for (let arg2 = lowLimit; arg2 < hiLimit; arg2 += 1) {
       if (gcd(arg1, arg2) === gcdBase) acc.push([arg1, arg2]);
     }
   }
@@ -16,12 +20,13 @@ const generateGcdArray = (gcdBase) => {
 };
 
 // game data generator of qestions and right answers
-// gameData = [['question 1', 'yes'],['question 2', 'no'],['question 3', 'yes']]
+// gameData = [['6 9', '3'], ['12 16', '4'], ['25 50', '5']]
 const generateGameData = (questionsInTest) => {
   const gameData = [];
 
   for (let i = 0; i < questionsInTest; i += 1) {
     const item = [];
+    // gcdBase is a random namber actually a CGD to start make pair of numbers
     const gcdBase = getRandomInt(2, 11);
     const gcdArray = generateGcdArray(gcdBase);
     const gcdArrayRandomIndex = getRandomInt(-1, gcdArray.length);
