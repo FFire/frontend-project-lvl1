@@ -12,3 +12,6 @@ brain-calc install module, win and loose
 
 brain-gcd install module, win and loose
 [![asciicast](https://asciinema.org/a/qKyFgd2pBcKYeam7UIOGxG6wn.svg)](https://asciinema.org/a/qKyFgd2pBcKYeam7UIOGxG6wn)
+
+brain-progression install module, win and loose
+[![asciicast](https://asciinema.org/a/n2VD4oMwc3N8ynUM4odkV6de7.svg)](https://asciinema.org/a/n2VD4oMwc3N8ynUM4odkV6de7)
