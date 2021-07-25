@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import generateGameData from '../src/games/brain-calc.js';
 import consoleInteract from '../src/index.js';
 

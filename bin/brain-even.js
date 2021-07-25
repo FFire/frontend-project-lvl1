@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import generateGameData from '../src/games/brain-even.js';
 import consoleInteract from '../src/index.js';
 
