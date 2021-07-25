@@ -17,7 +17,10 @@ const txtGoodBye = (userName) => `Let's try again, ${userName}!`;
 // get user name and say hello to him
 const getUserName = () => {
   console.log(txtWelcome());
-  const userName = readlineSync.question(txtWhatIsYourName());
+
+  const userName = readlineSync.question(txtWhatIsYourName(), {
+    defaultInput: 'Johnny Depp',
+  });
   console.log(txtHello(userName));
 
   return userName;
