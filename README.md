@@ -9,3 +9,6 @@ brain-even install module, win and loose
 
 brain-calc install module, win and loose
 [![asciicast](https://asciinema.org/a/1GTW89CTVstw99wi1TC7UP11Q.svg)](https://asciinema.org/a/1GTW89CTVstw99wi1TC7UP11Q)
+
+brain-gcd install module, win and loose
+[![asciicast](https://asciinema.org/a/qKyFgd2pBcKYeam7UIOGxG6wn.svg)](https://asciinema.org/a/qKyFgd2pBcKYeam7UIOGxG6wn)
