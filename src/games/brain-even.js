@@ -1,4 +1,8 @@
+import consoleInteract from '../index.js';
 import getRandomInt from './getRandomInt.js';
+
+const questionsInTest = 3;
+const txtDescription = () => 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
@@ -11,9 +15,9 @@ function genDataItem() {
 
 // game data generator of qestions and right answers
 // gameData = [['question 1', 'yes'],['question 2', 'no'],['question 3', 'yes']]
-const generateGameData = (questionCount) => {
+const generateGameData = () => {
   const gameData = [];
-  for (let i = 0; i < questionCount; i += 1) {
+  for (let i = 0; i < questionsInTest; i += 1) {
     const dataItem = genDataItem();
     gameData.push(dataItem);
   }
@@ -21,4 +25,9 @@ const generateGameData = (questionCount) => {
   return gameData;
 };
 
-export default generateGameData;
+const startGame = () => {
+  const gameData = generateGameData();
+  consoleInteract(txtDescription, gameData);
+};
+
+export default startGame;
