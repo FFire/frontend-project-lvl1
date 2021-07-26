@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/FFire/frontend-project-lvl1#readme",
   "dependencies": {
-    "-": "^0.0.1",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-node": "^11.1.0",
