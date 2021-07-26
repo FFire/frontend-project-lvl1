@@ -1,59 +1,38 @@
 import readlineSync from 'readline-sync';
 
-// all strings for game as functions
-const txtWelcome = () => 'Welcome to the Brain Games!';
-const txtWhatIsYourName = () => 'May I have your name? ';
-const txtHello = (userName) => `Hello, ${userName}!`;
-const txtCongratuation = (userName) => `Congratulations, ${userName}!`;
-const txtQuestion = (question) => `Question: ${question} `;
-const txtAnswer = (yourAnswer) => `Your answer: ${yourAnswer}`;
-const txtCorrect = () => 'Correct!';
-const txtNonCorrect = (userAnswer, answer) => {
-  const line = `"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`;
-  return line;
-};
-const txtGoodBye = (userName) => `Let's try again, ${userName}!`;
-
-// get user name and say hello to him
-const getUserName = () => {
-  console.log(txtWelcome());
-
-  const userName = readlineSync.question(txtWhatIsYourName(), {
-    defaultInput: 'Johnny Depp',
-  });
-  console.log(txtHello(userName));
-
-  return userName;
-};
-
-// ask user a qestion and return is ansewr was right
-const isAnswerCorrect = (question, answer) => {
-  const userAnswer = readlineSync.question(txtQuestion(question));
-
-  if (userAnswer === answer) {
-    console.log(txtAnswer(userAnswer));
-    console.log(txtCorrect());
-    return true;
-  }
-  // if user's answer was not correct
-  console.log(txtNonCorrect(userAnswer, answer));
-  return false;
-};
-
 // main loop through qestions/answers data
 const consoleInteract = (txtDescription, gameData) => {
-  const userName = getUserName();
-  console.log(txtDescription());
+  // sub function -  ask user a qestion and return is ansewr was right
+  const isAnswerCorrect = (question, answer) => {
+    const userAnswer = readlineSync.question(`Question: ${question} `);
+    if (userAnswer === answer) {
+      console.log(`Your answer: ${userAnswer}`);
+      console.log('Correct!');
+      return true;
+    }
+    // if user's answer was not correct
+    console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
+    return false;
+  };
 
+  // get user name and say hello to him
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ', {
+    defaultInput: 'Johnny Depp',
+  });
+  console.log(`Hello, ${userName}!`);
+  // say test description
+  console.log(txtDescription);
+  // loop through qwestions and ask them
   // eslint-disable-next-line no-restricted-syntax
   for (const [question, answer] of gameData) {
     if (!isAnswerCorrect(question, answer)) {
-      console.log(txtGoodBye(userName));
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
-
-  console.log(txtCongratuation(userName));
+  // yea you win!
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default consoleInteract;
