@@ -1,37 +1,27 @@
 import readlineSync from 'readline-sync';
 
-// main loop through questions/answers data
 const consoleInteract = (description, gameData) => {
-  // sub function -  ask user a question and return is ansewr was right
-  const isAnswerCorrect = (question, answer) => {
-    const userAnswer = readlineSync.question(`Question: ${question} `);
-    if (userAnswer === answer) {
-      console.log(`Your answer: ${userAnswer}`);
-      console.log('Correct!');
-      return true;
-    }
-    // if user's answer was not correct
-    console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
-    return false;
-  };
-
-  // get user name and say hello to him
   console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ', {
-    defaultInput: 'Johnny Depp',
-  });
+  const userName = readlineSync.question('May I have your name? ', { defaultInput: 'Sam' });
   console.log(`Hello, ${userName}!`);
-  // say test description
   console.log(description);
-  // loop through qwestions and ask them
+
+  // loop through qwestions in [gameData] and ask them and check answers
   // eslint-disable-next-line no-restricted-syntax
   for (const [question, answer] of gameData) {
-    if (!isAnswerCorrect(question, answer)) {
+    const userAnswer = readlineSync.question(`Question: ${question} `);
+    const isAnswerCorrect = userAnswer === answer;
+
+    // Not correct answer guard
+    if (!isAnswerCorrect) {
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
+
+    console.log(`Your answer: ${userAnswer}`);
+    console.log('Correct!');
   }
-  // yea you win!
   console.log(`Congratulations, ${userName}!`);
 };
 
