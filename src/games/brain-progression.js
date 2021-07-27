@@ -1,5 +1,5 @@
 import consoleInteract from '../index.js';
-import getRandomInt from './getRandomInt.js';
+import getRandomInt from '../utils.js';
 
 const questionsInTest = 3;
 const description = 'What number is missing in the progression?';
