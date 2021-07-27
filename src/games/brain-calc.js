@@ -15,7 +15,7 @@ const genDataItem = () => {
   const maxRnd = 10;
   const arg1 = getRandomInt(minRnd, maxRnd);
   const arg2 = getRandomInt(minRnd, maxRnd);
-  const rndIndex = getRandomInt(0, actions.length);
+  const rndIndex = getRandomInt(0, actions.length - 1);
 
   // question = "7 * 7" ... "4 - 6" ... "9 + 4"
   const mathSign = actions[rndIndex][0];
