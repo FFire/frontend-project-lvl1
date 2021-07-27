@@ -2,7 +2,7 @@ import consoleInteract from '../index.js';
 import getRandomInt from './getRandomInt.js';
 
 const questionsInTest = 3;
-const txtDescription = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 // Generate array of progression
 // generateProgression() : [3, 6, 9, 12, 15, 18 ...and so on]
@@ -44,7 +44,7 @@ const generateGameData = () => {
 
 const startGame = () => {
   const gameData = generateGameData();
-  consoleInteract(txtDescription, gameData);
+  consoleInteract(description, gameData);
 };
 
 export default startGame;

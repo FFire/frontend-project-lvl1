@@ -2,7 +2,7 @@ import consoleInteract from '../index.js';
 import getRandomInt from './getRandomInt.js';
 
 const questionsInTest = 3;
-const txtDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // https://stackoverflow.com/a/40200710/87713
 const isPrime = (num) => {
@@ -35,7 +35,7 @@ const generateGameData = () => {
 
 const startGame = () => {
   const gameData = generateGameData();
-  consoleInteract(txtDescription, gameData);
+  consoleInteract(description, gameData);
 };
 
 export default startGame;

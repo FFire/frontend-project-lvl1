@@ -2,7 +2,7 @@ import consoleInteract from '../index.js';
 import getRandomInt from './getRandomInt.js';
 
 const questionsInTest = 3;
-const txtDescription = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const actions = [
   [' + ', (arg1, arg2) => arg1 + arg2],
@@ -39,7 +39,7 @@ const generateGameData = () => {
 
 const startGame = () => {
   const gameData = generateGameData();
-  consoleInteract(txtDescription, gameData);
+  consoleInteract(description, gameData);
 };
 
 export default startGame;

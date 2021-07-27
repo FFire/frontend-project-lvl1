@@ -2,7 +2,7 @@ import consoleInteract from '../index.js';
 import getRandomInt from './getRandomInt.js';
 
 const questionsInTest = 3;
-const txtDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
@@ -27,7 +27,7 @@ const generateGameData = () => {
 
 const startGame = () => {
   const gameData = generateGameData();
-  consoleInteract(txtDescription, gameData);
+  consoleInteract(description, gameData);
 };
 
 export default startGame;

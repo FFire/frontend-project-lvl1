@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 // main loop through questions/answers data
-const consoleInteract = (txtDescription, gameData) => {
+const consoleInteract = (description, gameData) => {
   // sub function -  ask user a question and return is ansewr was right
   const isAnswerCorrect = (question, answer) => {
     const userAnswer = readlineSync.question(`Question: ${question} `);
@@ -22,7 +22,7 @@ const consoleInteract = (txtDescription, gameData) => {
   });
   console.log(`Hello, ${userName}!`);
   // say test description
-  console.log(txtDescription);
+  console.log(description);
   // loop through qwestions and ask them
   // eslint-disable-next-line no-restricted-syntax
   for (const [question, answer] of gameData) {
