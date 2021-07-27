@@ -8,9 +8,9 @@ const isEven = (num) => num % 2 === 0;
 
 // genDataItem = ['question 1', 'yes'] OR ['question 2', 'no']
 function genDataItem() {
-  const qestion = getRandomInt(1, 11);
-  const answer = isEven(qestion) ? 'yes' : 'no';
-  return [qestion, answer];
+  const question = getRandomInt(1, 11);
+  const answer = isEven(question) ? 'yes' : 'no';
+  return [question, answer];
 }
 
 // game data generator of qestions and right answers
