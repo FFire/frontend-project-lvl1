@@ -13,10 +13,10 @@ function genDataItem() {
   const arg1 = getRandomInt(minRnd, maxRnd);
   const arg2 = getRandomInt(minRnd, maxRnd);
 
-  const qestion = `${arg1} ${arg2}`;
+  const question = `${arg1} ${arg2}`;
   const answer = gcd(arg1, arg2).toString();
 
-  return [qestion, answer];
+  return [question, answer];
 }
 
 // game data generator of qestions and right answers
