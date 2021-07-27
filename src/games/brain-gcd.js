@@ -19,7 +19,7 @@ function genDataItem() {
   return [question, answer];
 }
 
-// game data generator of qestions and right answers
+// game data generator of questions and right answers
 // gameData = [['6 9', '3'], ['12 16', '4'], ['25 50', '5']]
 const generateGameData = () => {
   const gameData = [];

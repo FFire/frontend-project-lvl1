@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
-// main loop through qestions/answers data
+// main loop through questions/answers data
 const consoleInteract = (txtDescription, gameData) => {
-  // sub function -  ask user a qestion and return is ansewr was right
+  // sub function -  ask user a question and return is ansewr was right
   const isAnswerCorrect = (question, answer) => {
     const userAnswer = readlineSync.question(`Question: ${question} `);
     if (userAnswer === answer) {
