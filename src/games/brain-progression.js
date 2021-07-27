@@ -24,9 +24,9 @@ function genDataItem() {
   const rndIndex = getRandomInt(0, progression.length);
   const answer = progression[rndIndex].toString();
   progression[rndIndex] = '..';
-  const qestion = progression.join(' ');
+  const question = progression.join(' ');
 
-  return [qestion, answer];
+  return [question, answer];
 }
 
 // game data generator of qestions and right answers
