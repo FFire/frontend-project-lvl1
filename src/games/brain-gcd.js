@@ -2,7 +2,7 @@ import consoleInteract from '../index.js';
 import getRandomInt from '../utils.js';
 
 const questionsInTest = 3;
-const description = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 // calculate GCD for pair of numbers
 const gcd = (a, b) => (!b ? a : gcd(b, a % b));
@@ -34,7 +34,7 @@ const generateGameData = () => {
 
 const startGame = () => {
   const gameData = generateGameData();
-  consoleInteract(description, gameData);
+  consoleInteract(gameDescription, gameData);
 };
 
 export default startGame;

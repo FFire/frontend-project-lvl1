@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
 
-const consoleInteract = (description, gameData) => {
+const consoleInteract = (gameDescription, gameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ', { defaultInput: 'Sam' });
   console.log(`Hello, ${userName}!`);
-  console.log(description);
+  console.log(gameDescription);
 
   // loop through qwestions in [gameData] and ask them and check answers
   // eslint-disable-next-line no-restricted-syntax
