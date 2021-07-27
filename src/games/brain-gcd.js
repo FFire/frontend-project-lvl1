@@ -7,7 +7,7 @@ const txtDescription = 'Find the greatest common divisor of given numbers.';
 // calculate GCD for pair of numbers
 const gcd = (a, b) => (!b ? a : gcd(b, a % b));
 
-function genDataItem() {
+const genDataItem = () => {
   const minRnd = 2;
   const maxRnd = 25;
   const arg1 = getRandomInt(minRnd, maxRnd);
@@ -17,7 +17,7 @@ function genDataItem() {
   const answer = gcd(arg1, arg2).toString();
 
   return [question, answer];
-}
+};
 
 // game data generator of questions and right answers
 // gameData = [['6 9', '3'], ['12 16', '4'], ['25 50', '5']]

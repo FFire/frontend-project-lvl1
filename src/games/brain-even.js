@@ -7,11 +7,11 @@ const txtDescription = 'Answer "yes" if the number is even, otherwise answer "no
 const isEven = (num) => num % 2 === 0;
 
 // genDataItem = ['question 1', 'yes'] OR ['question 2', 'no']
-function genDataItem() {
+const genDataItem = () => {
   const question = getRandomInt(1, 11);
   const answer = isEven(question) ? 'yes' : 'no';
   return [question, answer];
-}
+};
 
 // game data generator of questions and right answers
 // gameData = [['question 1', 'yes'],['question 2', 'no'],['question 3', 'yes']]

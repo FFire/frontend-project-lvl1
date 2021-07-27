@@ -19,7 +19,7 @@ const genProgression = () => {
   return acc;
 };
 
-function genDataItem() {
+const genDataItem = () => {
   const progression = genProgression();
   const rndIndex = getRandomInt(0, progression.length);
   const answer = progression[rndIndex].toString();
@@ -27,7 +27,7 @@ function genDataItem() {
   const question = progression.join(' ');
 
   return [question, answer];
-}
+};
 
 // game data generator of questions and right answers
 // gameData = [['3 6 .. 12 15 18', '9'], [...], [...]]

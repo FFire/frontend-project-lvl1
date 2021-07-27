@@ -10,7 +10,7 @@ const actions = [
   [' * ', (arg1, arg2) => arg1 * arg2],
 ];
 
-function genDataItem() {
+const genDataItem = () => {
   const minRnd = 1;
   const maxRnd = 11;
   const arg1 = getRandomInt(minRnd, maxRnd);
@@ -23,7 +23,7 @@ function genDataItem() {
   const question = `${arg1}${mathSign}${arg2}`;
   const answer = mathFunc(arg1, arg2).toString();
   return [question, answer];
-}
+};
 
 // game data generator of questions and right answers
 // gameData = [['question 1', 'yes'],['question 2', 'no'],['question 3', 'yes']]

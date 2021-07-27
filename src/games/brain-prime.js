@@ -13,13 +13,13 @@ const isPrime = (num) => {
 };
 
 // genDataItem = ['question 1', 'yes']
-function genDataItem() {
+const genDataItem = () => {
   const minRnd = 1;
   const maxRnd = 31;
   const question = getRandomInt(minRnd, maxRnd);
   const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
-}
+};
 
 // game data generator of questions and right answers
 // gameData = [['question 1', 'yes'],['question 2', 'no'],['question 3', 'yes']]
