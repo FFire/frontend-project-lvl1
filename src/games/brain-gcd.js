@@ -1,11 +1,8 @@
 import consoleInteract from '../index.js';
-import getRandomInt from '../utils.js';
+import { getRandomInt, calculateGCD } from '../utils.js';
 
 const questionsInTest = 3;
 const gameDescription = 'Find the greatest common divisor of given numbers.';
-
-// calculate GCD for pair of numbers
-const gcd = (a, b) => (!b ? a : gcd(b, a % b));
 
 const genDataItem = () => {
   const minRnd = 2;
@@ -14,7 +11,7 @@ const genDataItem = () => {
   const arg2 = getRandomInt(minRnd, maxRnd);
 
   const question = `${arg1} ${arg2}`;
-  const answer = gcd(arg1, arg2).toString();
+  const answer = calculateGCD(arg1, arg2).toString();
 
   return [question, answer];
 };

@@ -1,5 +1,5 @@
 import consoleInteract from '../index.js';
-import getRandomInt from '../utils.js';
+import { getRandomInt } from '../utils.js';
 
 const questionsInTest = 3;
 const gameDescription = 'What is the result of the expression?';
@@ -12,7 +12,7 @@ const actions = [
 
 const genDataItem = () => {
   const minRnd = 1;
-  const maxRnd = 11;
+  const maxRnd = 10;
   const arg1 = getRandomInt(minRnd, maxRnd);
   const arg2 = getRandomInt(minRnd, maxRnd);
   const rndIndex = getRandomInt(0, actions.length);

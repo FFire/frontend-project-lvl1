@@ -1,5 +1,5 @@
 import consoleInteract from '../index.js';
-import getRandomInt from '../utils.js';
+import { getRandomInt } from '../utils.js';
 
 const questionsInTest = 3;
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -8,7 +8,9 @@ const isEven = (num) => num % 2 === 0;
 
 // genDataItem = ['question 1', 'yes'] OR ['question 2', 'no']
 const genDataItem = () => {
-  const question = getRandomInt(1, 11);
+  const minRnd = 1;
+  const maxRnd = 10;
+  const question = getRandomInt(minRnd, maxRnd);
   const answer = isEven(question) ? 'yes' : 'no';
   return [question, answer];
 };
