@@ -21,7 +21,7 @@ const genProgression = () => {
 
 const genDataItem = () => {
   const progression = genProgression();
-  const rndIndex = getRandomInt(0, progression.length);
+  const rndIndex = getRandomInt(0, progression.length - 1);
   const answer = progression[rndIndex].toString();
   progression[rndIndex] = '..';
   const question = progression.join(' ');
