@@ -18,10 +18,11 @@ function genDataItem() {
   const rndIndex = getRandomInt(0, actions.length);
 
   // qestion = "7 * 7" ... "4 - 6" ... "9 + 4"
-  const qestion = `${arg1}${actions[rndIndex][0]}${arg2}`;
+  const mathSign = actions[rndIndex][0];
   const mathFunc = actions[rndIndex][1];
+  const question = `${arg1}${mathSign}${arg2}`;
   const answer = mathFunc(arg1, arg2).toString();
-  return [qestion, answer];
+  return [question, answer];
 }
 
 // game data generator of qestions and right answers
