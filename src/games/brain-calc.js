@@ -1,4 +1,4 @@
-import consoleInteract from '../index.js';
+import { consoleInteract, generateGameData } from '../index.js';
 import { getRandomInt } from '../utils.js';
 
 const questionsInTest = 3;
@@ -25,20 +25,8 @@ const genDataItem = () => {
   return [question, answer];
 };
 
-// game data generator of questions and right answers
-// gameData = [['question 1', 'yes'],['question 2', 'no'],['question 3', 'yes']]
-const generateGameData = () => {
-  const gameData = [];
-  for (let i = 0; i < questionsInTest; i += 1) {
-    const dataItem = genDataItem();
-    gameData.push(dataItem);
-  }
-
-  return gameData;
-};
-
 const startGame = () => {
-  const gameData = generateGameData();
+  const gameData = generateGameData(questionsInTest, genDataItem);
   consoleInteract(gameDescription, gameData);
 };
 

@@ -1,12 +1,24 @@
 import readlineSync from 'readline-sync';
 
-const consoleInteract = (gameDescription, gameData) => {
+// game data generator of questions and right answers
+// gameData = [['question 1', 'yes'],['question 2', 'no'],['question 3', 'yes']]
+export const generateGameData = (questionsInTest, genDataItem) => {
+  const gameData = [];
+  for (let i = 0; i < questionsInTest; i += 1) {
+    const dataItem = genDataItem();
+    gameData.push(dataItem);
+  }
+
+  return gameData;
+};
+
+export const consoleInteract = (gameDescription, gameData) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ', { defaultInput: 'Sam' });
   console.log(`Hello, ${userName}!`);
   console.log(gameDescription);
 
-  // loop through qwestions in [gameData] and ask them and check answers
+  // loop through questions in [gameData] and ask them and check answers
   // eslint-disable-next-line no-restricted-syntax
   for (const [question, answer] of gameData) {
     const userAnswer = readlineSync.question(`Question: ${question} `);
@@ -24,5 +36,3 @@ const consoleInteract = (gameDescription, gameData) => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
-
-export default consoleInteract;
