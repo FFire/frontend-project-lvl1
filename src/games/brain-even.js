@@ -1,14 +1,17 @@
 import { consoleInteract, generateGameData } from '../index.js';
-import { getRandomInt, isEven } from '../utils.js';
+import getRandomInt from '../utils.js';
 
-const questionsInTest = 3;
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+const questionsInTest = 3;
+const gameMinNumber = 1;
+const gameMaxNumber = 10;
+
+// Is number is even
+const isEven = (num) => num % 2 === 0;
 
 // genDataItem = ['question 1', 'yes'] OR ['question 2', 'no']
 const genDataItem = () => {
-  const minRnd = 1;
-  const maxRnd = 10;
-  const question = getRandomInt(minRnd, maxRnd);
+  const question = getRandomInt(gameMinNumber, gameMaxNumber);
   const answer = isEven(question) ? 'yes' : 'no';
   return [question, answer];
 };
