@@ -7,9 +7,9 @@ const gameMinNumber = 1;
 const gameMaxNumber = 10;
 
 const actions = [
-  [' + ', (arg1, arg2) => arg1 + arg2],
-  [' - ', (arg1, arg2) => arg1 - arg2],
-  [' * ', (arg1, arg2) => arg1 * arg2],
+  ['+', (arg1, arg2) => arg1 + arg2],
+  ['-', (arg1, arg2) => arg1 - arg2],
+  ['*', (arg1, arg2) => arg1 * arg2],
 ];
 const genDataItem = () => {
   const arg1 = getRandomInt(gameMinNumber, gameMaxNumber);
@@ -18,7 +18,7 @@ const genDataItem = () => {
 
   // question = "7 * 7" ... "4 - 6" ... "9 + 4"
   const [mathSign, mathFunc] = actions[rndIndex];
-  const question = `${arg1}${mathSign}${arg2}`;
+  const question = `${arg1} ${mathSign} ${arg2}`;
   const answer = mathFunc(arg1, arg2).toString();
   return [question, answer];
 };
