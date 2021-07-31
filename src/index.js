@@ -2,9 +2,9 @@ import readlineSync from 'readline-sync';
 
 // game data generator of questions and right answers
 // gameData = [['question 1', 'yes'],['question 2', 'no'],['question 3', 'yes']]
-export const generateGameData = (questionsInTest, genDataItem) => {
+export const generateGameData = (questionsCount, genDataItem) => {
   const gameData = [];
-  for (let i = 0; i < questionsInTest; i += 1) {
+  for (let i = 0; i < questionsCount; i += 1) {
     const dataItem = genDataItem();
     gameData.push(dataItem);
   }
