@@ -22,11 +22,11 @@ const isPrime = (num) => {
   };
 
   // Guard to speed up calculation
+  if (num < 2) return false;
   const cachedResult = getCachedResult(num);
   if (cachedResult !== undefined) return cachedResult;
 
   // Core calculation is number prime https://stackoverflow.com/a/40200710/87713
-  if (num < 2) return false;
   for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
     if (num % i === 0) return false;
   }
