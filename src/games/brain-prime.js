@@ -25,11 +25,12 @@ const isPrime = (num) => {
   const cachedResult = getCachedResult(num);
   if (cachedResult !== undefined) return cachedResult;
 
-  // Core calculation ss number is prime https://stackoverflow.com/a/40200710/87713
+  // Core calculation is number prime https://stackoverflow.com/a/40200710/87713
+  if (num < 2) return false;
   for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
     if (num % i === 0) return false;
   }
-  return num > 1;
+  return true;
 };
 
 // genDataItem = ['question 1', 'yes']
