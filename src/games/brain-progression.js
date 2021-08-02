@@ -2,7 +2,6 @@ import { consoleInteract, generateGameData } from '../index.js';
 import getRandomInt from '../utils.js';
 
 const gameDescription = 'What number is missing in the progression?';
-const questionsCount = 3;
 const progressionStepMin = 2;
 const progressionStepMax = 10;
 const progressionStartMin = 1;
@@ -34,7 +33,7 @@ const genDataItem = () => {
 };
 
 const startGame = () => {
-  const gameData = generateGameData(questionsCount, genDataItem);
+  const gameData = generateGameData(genDataItem);
   consoleInteract(gameDescription, gameData);
 };
 

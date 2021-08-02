@@ -2,7 +2,6 @@ import { consoleInteract, generateGameData } from '../index.js';
 import getRandomInt from '../utils.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
-const questionsCount = 3;
 const gameMinNumber = 1;
 const gameMaxNumber = 10;
 
@@ -17,7 +16,7 @@ const genDataItem = () => {
 };
 
 const startGame = () => {
-  const gameData = generateGameData(questionsCount, genDataItem);
+  const gameData = generateGameData(genDataItem);
   consoleInteract(gameDescription, gameData);
 };
 

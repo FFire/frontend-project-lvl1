@@ -2,7 +2,6 @@ import { consoleInteract, generateGameData } from '../index.js';
 import getRandomInt from '../utils.js';
 
 const gameDescription = 'What is the result of the expression?';
-const questionsCount = 3;
 const gameMinNumber = 1;
 const gameMaxNumber = 10;
 
@@ -24,7 +23,7 @@ const genDataItem = () => {
 };
 
 const startGame = () => {
-  const gameData = generateGameData(questionsCount, genDataItem);
+  const gameData = generateGameData(genDataItem);
   consoleInteract(gameDescription, gameData);
 };
 

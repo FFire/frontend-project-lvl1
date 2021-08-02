@@ -2,7 +2,6 @@ import { consoleInteract, generateGameData } from '../index.js';
 import getRandomInt from '../utils.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
-const questionsCount = 3;
 const gameMinNumber = 2;
 const gameMaxNumber = 25;
 
@@ -20,7 +19,7 @@ const genDataItem = () => {
 };
 
 const startGame = () => {
-  const gameData = generateGameData(questionsCount, genDataItem);
+  const gameData = generateGameData(genDataItem);
   consoleInteract(gameDescription, gameData);
 };
 
