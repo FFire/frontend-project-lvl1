@@ -1,7 +1,8 @@
-import { consoleInteract, generateGameData } from '../index.js';
+import { consoleInteract, generateGameData, setQuestionCount } from '../index.js';
 import getRandomInt from '../utils.js';
 
 const gameDescription = 'What number is missing in the progression?';
+setQuestionCount(3);
 const progressionStepMin = 2;
 const progressionStepMax = 10;
 const progressionStartMin = 1;

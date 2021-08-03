@@ -1,7 +1,8 @@
-import { consoleInteract, generateGameData } from '../index.js';
+import { consoleInteract, generateGameData, setQuestionCount } from '../index.js';
 import getRandomInt from '../utils.js';
 
 const gameDescription = 'What is the result of the expression?';
+setQuestionCount(3);
 const gameMinNumber = 1;
 const gameMaxNumber = 10;
 
