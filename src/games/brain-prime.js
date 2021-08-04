@@ -1,8 +1,7 @@
-import { consoleInteract, generateGameData, setQuestionCount } from '../index.js';
+import { consoleInteract, generateGameData } from '../index.js';
 import getRandomInt from '../utils.js';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-setQuestionCount(3);
 const gameMinNumber = 1;
 const gameMaxNumber = 31;
 

@@ -1,8 +1,7 @@
-import { consoleInteract, generateGameData, setQuestionCount } from '../index.js';
+import { consoleInteract, generateGameData } from '../index.js';
 import getRandomInt from '../utils.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
-setQuestionCount(3);
 const gameMinNumber = 2;
 const gameMaxNumber = 25;
 
