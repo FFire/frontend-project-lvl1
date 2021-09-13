@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/FFire/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/FFire/frontend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7d8d70332b5ca768b906/maintainability)](https://codeclimate.com/github/FFire/frontend-project-lvl1/maintainability)
 [![example workflow](https://github.com/FFire/frontend-project-lvl1/actions/workflows/main.yml/badge.svg)](https://github.com/FFire/frontend-project-lvl1/actions)
 
 brain-even install module, win and loose
